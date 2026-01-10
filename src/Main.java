@@ -11,7 +11,6 @@ public class Main {
         AttendanceRecord r2 = new AttendanceRecord(s2, false);
         AttendanceRecord r3 = new AttendanceRecord(s3, true);
 
-        // --- Сохраняем студентов и посещаемость ---
         s1.save();
         s2.save();
         s3.save();
@@ -20,11 +19,9 @@ public class Main {
         r2.save();
         r3.save();
 
-        // --- Выводим из БД ---
         Student.getAll();
         AttendanceRecord.getAll();
 
-        // --- Полиморфизм и фильтры ---
         Person p1 = s1;
         Person p2 = t1;
         System.out.println("\nRoles:");
