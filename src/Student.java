@@ -19,7 +19,7 @@ public class Student extends Person {
         return "Student{id=" + id + ", name='" + name + "'}";
     }
 
-    // --- CRUD методы ---
+
     public void save() {
         String sql = "INSERT INTO students (id, name) VALUES (?, ?) ON CONFLICT (id) DO NOTHING";
         try (Connection c = DB.connect();
