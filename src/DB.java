@@ -9,7 +9,7 @@ public class DB {
 
     public static Connection connect() {
         try {
-            Class.forName("org.postgresql.Driver"); // загружаем драйвер
+            Class.forName("org.postgresql.Driver"); 
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException e) {
             System.out.println("PostgreSQL Driver not found!");
